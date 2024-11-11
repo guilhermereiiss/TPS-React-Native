@@ -16,10 +16,6 @@ const TelaCarrinho = ({ route, navigation }) => {
           </View>
         ))
       )}
-      <Button
-        title="Limpar Carrinho"
-        onPress={() => navigation.navigate('Produtos')}
-      />
     </View>
   );
 };
