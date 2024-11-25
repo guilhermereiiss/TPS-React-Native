@@ -12,10 +12,10 @@ import TP3_09 from "../TP3/09/index.jsx";
 import TP3_10 from "../TP3/10/index.jsx";
 import TP3_11 from "../TP3/11/index.jsx";
 import TP3_12 from "../TP3/12/index.jsx";
-import TP3_13 from "../TP3/13/index.jsx";
-import TP3_14 from "../TP3/14/index.jsx";
-import TP3_15 from "../TP3/15/index.jsx";
-import TP3_16 from "../TP3/16/index.jsx";
+import TP3_13 from "../TP3/13/index.tsx";
+import TP3_14 from "../TP3/14/index.tsx";
+import TP3_15 from "../TP3/15/index.tsx";
+import TP3_16 from "../TP3/16/index.tsx";
 
 const Stack = createStackNavigator();
 
