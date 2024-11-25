@@ -1,58 +1,58 @@
 import { SectionList, Text, View, StyleSheet } from 'react-native';
 
-const Lista = ({ tarefasPorDia }) => {
-  const renderItem = ({ item }) => (
-    <View style={styles.item}>
-      <Text style={styles.texto}>{item}</Text>
+const Lista = ({ categorias }) => {
+  const renderizarItem = ({ item }) => (
+    <View style={styles.cardItem}>
+      <Text style={styles.textoItem}>{item}</Text>
     </View>
   );
 
-  const renderSectionHeader = ({ section }) => (
-    <View style={styles.header}>
-      <Text style={styles.headerTexto}>{section.title}</Text>
+  const renderizarCabecalho = ({ section }) => (
+    <View style={styles.cabecalho}>
+      <Text style={styles.textoCabecalho}>{section.title}</Text>
     </View>
   );
 
   return (
     <SectionList
-      sections={tarefasPorDia}
+      sections={categorias}
       keyExtractor={(item, index) => item + index}
-      renderItem={renderItem}
-      renderSectionHeader={renderSectionHeader}
-      contentContainerStyle={styles.listContainer}
+      renderItem={renderizarItem}
+      renderSectionHeader={renderizarCabecalho}
+      contentContainerStyle={styles.containerLista}
     />
   );
 };
 
 const styles = StyleSheet.create({
-  listContainer: {
-    paddingVertical: 10,
+  containerLista: {
+    paddingVertical: 12,
   },
-  header: {
-    backgroundColor: '#007bff',
-    padding: 10,
-    borderRadius: 5,
-    marginVertical: 5,
+  cabecalho: {
+    backgroundColor: '#0288d1',
+    padding: 12,
+    borderRadius: 6,
+    marginVertical: 6,
   },
-  headerTexto: {
-    fontSize: 18,
-    color: '#fff',
-    fontWeight: 'bold',
+  textoCabecalho: {
+    fontSize: 20,
+    color: '#ffffff',
+    fontWeight: '700',
   },
-  item: {
-    backgroundColor: '#fff',
+  cardItem: {
+    backgroundColor: '#ffffff',
     padding: 15,
-    marginVertical: 8,
-    borderRadius: 8,
-    elevation: 3,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
+    marginVertical: 6,
+    borderRadius: 10,
+    elevation: 2,
+    shadowColor: '#666',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.3,
     shadowRadius: 4,
   },
-  texto: {
+  textoItem: {
     fontSize: 16,
-    color: '#333',
+    color: '#1a1a1a',
   },
 });
 
